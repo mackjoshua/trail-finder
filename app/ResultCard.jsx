@@ -31,7 +31,6 @@ export default async function Result (data) {
                     <p>{result.timezone}</p>
                     <p>{result.location.formatted_address}</p>
                     <p>{result.location.postcode}</p>
-                    <p>{result.fsq_id}</p>
                     <RCImage fsqID={result.fsq_id}/>
                 </div>
                 ))}
