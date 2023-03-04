@@ -26,21 +26,21 @@ export default function SearchForm({children}) {
         if(!splitTerm) return;
         router.push(`search?categories=16019&near=${splitTerm[0]}%2C%20${splitTerm[1]}`);
 
-        const form = e.target;
-        const formData = new FormData(form);
+        // const form = e.target;
+        // const formData = new FormData(form);
 
-        const formObject = Object.fromEntries(formData.entries());
-        const formJSON = JSON.stringify(formObject);
+        // const formObject = Object.fromEntries(formData.entries());
+        // const formJSON = JSON.stringify(formObject);
 
-        const options = {
+        // const options = {
 
-          method: 'POST',
-          headers: { "Content-Type": "application/json"},
-          body: formJSON
-         }
+        //   method: 'POST',
+        //   headers: { "Content-Type": "application/json"},
+        //   body: formJSON
+        //  }
 
-        const response = await fetch('http://localhost:3000/api/userinput', options);
-        console.log(await response.json());
+        // const response = await fetch('http://localhost:3000/api/userinput', options);
+        // console.log(await response.json());
         // console.log(formJSON);
         // console.log(result, 'This is the result');
     }

@@ -5,7 +5,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'fsq3/9bjC0G+TcTDg6EXfOUPi0KRzMJ4XyGXliESnHRoYQY='
+        Authorization: `${process.env.FS_KEY_2}`
     }
 };
 
@@ -22,8 +22,8 @@ const options = {
 
 export default async function RCImage({fsqID}) { 
     let tester = fsqID;
-    const URL = `https://api.foursquare.com/v3/places/${tester}/photos`;
-    // const URL = 'http://localhost:3000/api/placesphotos';
+    // const URL = `https://api.foursquare.com/v3/places/${tester}/photos`;
+    const URL = 'http://localhost:3000/api/placesphotos';
     const res = await fetch(URL, options);
     let results = await res.text();
 
@@ -35,6 +35,6 @@ export default async function RCImage({fsqID}) {
     // console.log(typeof results, 'Here they are');
     // console.log(results);
     return <div>
-        <div>{typeof results !== "string" ? results.map((result) => (<div key={result.id}> <Image alt="alt"src={`${result.prefix}original${result.suffix}`} width={result.width} height={result.height}/> </div>)): console.log("didn't work")}</div>
+        <div>{typeof results !== "string" ? results.map((result) => (<div key={result.id}> <Image alt="alt"src={`${result.prefix}100x100${result.suffix}`} width={100} height={100}/> </div>)): console.log("didn't work")}</div>
     </div>
 }
