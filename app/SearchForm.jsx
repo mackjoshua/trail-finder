@@ -7,9 +7,6 @@ import Result from './ResultCard';
 import { useSearchParams } from 'next/navigation';
 
 
-// This form should post to the API so that we don't have to make a fetch call on the client side
-// So I should rewrite it from using FormData to a fetch request instead 3-1-23
-
 export default function SearchForm({children}) {
 
   const router = useRouter();

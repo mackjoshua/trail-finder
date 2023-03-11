@@ -2,6 +2,8 @@
 import  Image  from "next/image";
 import Link from "next/link";
 import RCImage from "./ResultCardImage";
+import ImageSlider from "./ImageSlider";
+import styles from './resultcard.module.css'
 
 const options = {
     method: 'GET',
@@ -25,7 +27,7 @@ async function getData(city,state) {
 //     // console.log(res.json());
 // }
 
-export default async function Result ({searchTerm}) {
+export default async function Result ({searchTerm, slides}) {
     console.log(searchTerm);
     let theCity = searchTerm[0];
     let theState = searchTerm[1]
@@ -40,19 +42,22 @@ export default async function Result ({searchTerm}) {
             <div>
                 <h1>Results</h1>
             </div>
-        
+            
        
-            <div>
+            <div className={styles.cardContainer}>
                 {results?.map((result) => (
-                     <Link href={`/details/${result.fsq_id}`} key={result.fsq_id}>
-                         <div key={result.fsq_id}>
+                <div key={result.fsq_id} className={styles.card}>
+                    <ImageSlider slides={slides}/>
+                     <Link href={`/details/trail?id=${result.fsq_id}`} key={result.fsq_id} className={styles.text}>
+                         <div key={result.fsq_id} className={styles.text}>
                                  <h2>{result.name}</h2>
                                  <p>{result.timezone}</p>
                                  <p>{result.location.formatted_address}</p>
                                  <p>{result.location.postcode}</p>
-                                 <RCImage fsqID={result.fsq_id}/>
                              </div>
                      </Link>
+                </div>
+                    
                 ))}
             </div>
         </>

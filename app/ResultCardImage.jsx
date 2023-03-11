@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import styles from './rcimage.module.css'
 
 const options = {
     method: 'GET',
@@ -16,9 +17,6 @@ const options = {
 // }
 
 
-// EOD 2-22-23 For some reason, using a template string URL returns an error, but
-// using a hard coded url (testURL) works fine. Perhaps the Prop fsqID isn't accessible in URL, and somehow
-// it's accessible in the returned component only? That could be the problem
 
 export default async function RCImage({fsqID}) { 
     let tester = fsqID;
@@ -34,7 +32,7 @@ export default async function RCImage({fsqID}) {
     
     // console.log(typeof results, 'Here they are');
     // console.log(results);
-    return <div>
+    return <div className={styles.container}>
         <div>{typeof results !== "string" ? results.map((result) => (<div key={result.id}> <Image alt="alt"src={`${result.prefix}100x100${result.suffix}`} width={100} height={100}/> </div>)): console.log("didn't work")}</div>
     </div>
 }

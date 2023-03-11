@@ -1,6 +1,8 @@
 
-import React from 'react'
+// import { useEffect, useState } from 'react'
 import ImageSlider from '@/app/ImageSlider';
+import styles from './details.module.css'
+import DetailsContainer from '@/app/DetailsContainer';
 
 const options = {
   method: 'GET',
@@ -15,22 +17,24 @@ const getPhotos = async () => {
   const URL = 'http://localhost:3000/api/placesphotos';
   const res = await fetch(URL, options);
   const slides = await res.json();
-  // console.log(typeof await res.json());
-  // console.log(slides);
   return await slides;
 }
+
+
 
 const slides = await getPhotos();
 
 export default function Page() {
 
+
   console.log(slides);
 
   return (
     <>
-        <div>page</div>
-        {/* <div>{}</div> */}
-        <ImageSlider slides={slides} />
+        <div className={styles.container}>
+            <ImageSlider slides={slides} />
+        </div>
+        <DetailsContainer />
     </>
   )
 }

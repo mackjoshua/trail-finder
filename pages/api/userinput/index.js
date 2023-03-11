@@ -4,7 +4,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'fsq3/9bjC0G+TcTDg6EXfOUPi0KRzMJ4XyGXliESnHRoYQY='
+        Authorization: `${process.env.FS_KEY_2}`
     }
 };
 

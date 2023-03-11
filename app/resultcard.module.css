@@ -1,0 +1,27 @@
+
+.card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f4e6;
+    border: 2px solid #D1C9B8;
+    border-radius: 12px;
+    padding: 16px;
+    height: 100%;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 8px;
+    row-gap: 8px;
+    height: 80vh;
+    margin: 0rem 28rem;
+}
+
+.text {
+    color: #402314;
+    text-decoration-line: none;
+}
+
