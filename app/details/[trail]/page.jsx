@@ -1,8 +1,10 @@
-
 // import { useEffect, useState } from 'react'
 import ImageSlider from '@/app/ImageSlider';
 import styles from './details.module.css'
 import DetailsContainer from '@/app/DetailsContainer';
+import WeatherBar from '@/app/WeatherBar';
+import { useContext } from 'react';
+import TrailsPageWrapper from '@/app/TrailsPageWrapper';
 
 const options = {
   method: 'GET',
@@ -31,10 +33,7 @@ export default function Page() {
 
   return (
     <>
-        <div className={styles.container}>
-            <ImageSlider slides={slides} />
-        </div>
-        <DetailsContainer />
+        <TrailsPageWrapper slides={slides}/>
     </>
   )
 }

@@ -2,7 +2,8 @@
 
 import React from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react';
+import { useEffect, useContext } from 'react';
+import { TrailContext } from './Contexts/TrailContext';
 
 const options = {
     method: 'GET',
@@ -16,7 +17,8 @@ const options = {
 
 export default function DetailsContainer() {
 
-  const [dataBrick, setDataBrick] = useState({});
+  const { setDataBrick } = useContext(TrailContext);
+  const { dataBrick } = useContext(TrailContext);
 
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -38,10 +40,6 @@ export default function DetailsContainer() {
     };
     fetchData();
   },[search]);
-
-  useEffect(() => {
-    console.log(dataBrick, 'this is the dataBrick');
-  }, [dataBrick]);
 
   
   return (
