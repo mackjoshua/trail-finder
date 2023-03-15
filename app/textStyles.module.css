@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Biennale";
+    src: local("Biennale"),
+    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-Book.ttf') format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Biennale";
+    src: local("Biennale"),
+    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-Regular.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Biennale";
+    src: local("Biennale"),
+    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-Medium.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Biennale";
+    src: local("Biennale"),
+    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-SemiBold.ttf') format('truetype');
+    font-weight: 800;
+}
+
+
+
+.Biennale {
+    font-family: 'Biennale';
+}
+
+.book {
+    font-weight: 500;
+}
+
+.regular {
+    font-weight: 600;
+}
+
+.medium {
+    font-weight: 700;
+}
+
+.semiBold {
+    font-weight: 800;
+}
+

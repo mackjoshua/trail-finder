@@ -6,6 +6,7 @@ import ImageSlider from './ImageSlider'
 import WeatherBar from './WeatherBar'
 import styles from './details/[trail]/details.module.css'
 import { TrailContext } from './Contexts/TrailContext'
+import ShareButton from './ShareButton'
 
 
 export default function TrailsPageWrapper({slides}) {

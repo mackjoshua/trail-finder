@@ -1,3 +1,10 @@
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid seagreen !important;
+    background: rgb(0, 100, 0 / 0.1) !important; */
+}
+
 body {
     background-color: #F0E7D3;
 }
+
