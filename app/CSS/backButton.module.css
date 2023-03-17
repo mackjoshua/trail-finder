@@ -1,0 +1,14 @@
+.search {
+    background-color: none;
+    border-radius: 9px;
+}
+
+.details {
+    background-color: blueviolet;
+    border-radius: 2px;
+}
+
+.wrapper {
+    background: none;
+    border: none;
+}

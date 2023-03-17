@@ -1,6 +1,10 @@
 import Link from "next/link";
+import BackButton from "../BackButton";
 import Result from "../ResultCard"
 import SearchForm from "../SearchForm"
+import styles from './search.module.css'
+import Image from "next/image";
+
 
 const options = {
     method: 'GET',
@@ -29,12 +33,13 @@ export default function Page({params, searchParams}) {
     let splitTerm = term.split(/[\s,]+/);
 
     return (
-        <>
-        <SearchForm slug={searchParams}/>
-        <Result searchTerm={splitTerm} slides={slides}/>
-        
-       
-        
-        </>
+        <div className={styles.container}>
+          <div className={styles.controls}>
+            <BackButton buttonInstance="searchPage"/>
+            <SearchForm slug={searchParams}/>
+            <Image />
+          </div>
+          <Result searchTerm={splitTerm} slides={slides}/>
+        </div>
     )
 }

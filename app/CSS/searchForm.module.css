@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f7f4e6;
+    border: 2px solid #D1C9B8;
+    padding: 1rem;
+    border-radius: 4px;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 2px;
+    background: none;
+}
+
+.input:focus-within {
+    outline: 1px solid blue;
+}
+
+.searchButton {
+    border: none;
+    background: none;
+}

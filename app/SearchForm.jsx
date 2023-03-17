@@ -5,6 +5,9 @@ import { useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Result from './ResultCard';
 import { useSearchParams } from 'next/navigation';
+import styles from './CSS/searchForm.module.css'
+import Image  from 'next/image';
+import searchIcon from '../Illustrations/search.png'
 
 
 export default function SearchForm({children}) {
@@ -44,8 +47,7 @@ export default function SearchForm({children}) {
 
   return (
     <>
-        <form onSubmit={handleSubmit}>
-            <label>Enter your City, State 
+        <form onSubmit={handleSubmit} className={styles.container}>
               <input 
               name='address'
               id='address'
@@ -54,12 +56,14 @@ export default function SearchForm({children}) {
               ref={searchInputRef}
               required
               value={address} 
+              className={styles.input}
               onChange={(e) => {setAddress(e.target.value);}}
               />
-            </label>
-            <button type='submit'> Submit form </button>
+           
+            <button type='submit' className={styles.searchButton}>
+              <Image src={searchIcon} alt="Image of a search Icon"/>
+            </button>
         </form>
-        <p>{address}</p>
         {/* <div>{children}</div> */}
     </>
   )

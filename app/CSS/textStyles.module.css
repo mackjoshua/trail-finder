@@ -26,6 +26,20 @@
     font-weight: 800;
 }
 
+@font-face {
+    font-family: "HVAnalogue";
+    src: local("HVAnalogue"),
+    url("/fonts/HVAnalogue/Regular/HV-Analogue-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "HVAnalogue";
+    src: local("HVAnalogue"),
+    url("/fonts/HVAnalogue/Bold/HV-Analogue-Bold.ttf");
+    font-weight: 800;
+}
+
 
 
 .Biennale {
@@ -45,6 +59,18 @@
 }
 
 .semiBold {
+    font-weight: 800;
+}
+
+.HVAnalogue {
+    font-family: "HVAnalogue";
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
     font-weight: 800;
 }
 

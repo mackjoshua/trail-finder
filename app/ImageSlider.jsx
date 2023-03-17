@@ -3,7 +3,9 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import styles from './imageslider.module.css'
+import styles from './CSS/imageslider.module.css'
+import leftChevron from 'Illustrations/chevron_left.png'
+import rightChevron from 'Illustrations/chevron_right.png'
 
 const options = {
     method: 'GET',
@@ -45,8 +47,12 @@ export default function ImageSlider({slides}) {
   return (
     <div style={{height: '100%', position:"relative"}}>
       <div className={styles.buttonContainer}>
-        <button onClick={decrementSlide}>‹</button>
-        <button className={styles.orangebutton}onClick={incrementSlide}>›</button>
+        <button onClick={decrementSlide} className={styles.buttons}>
+          <Image src={leftChevron} alt="Image of left Arrow"/>
+        </button>
+        <button className={styles.buttons}onClick={incrementSlide}>
+          <Image src={rightChevron} alt="Image of right Arrow"/>
+        </button>
       </div>
         <div style={{backgroundImage: `url(${slides[currentSlide].prefix}original${slides[currentSlide].suffix})`, height: "100%", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
            {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}400x100${slides[currentSlide].suffix}`} width={400} height={100}/> */}

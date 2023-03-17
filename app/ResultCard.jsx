@@ -3,7 +3,8 @@ import  Image  from "next/image";
 import Link from "next/link";
 import RCImage from "./ResultCardImage";
 import ImageSlider from "./ImageSlider";
-import styles from './resultcard.module.css'
+import styles from './CSS/resultcard.module.css'
+import textStyles from './CSS/textStyles.module.css'
 
 const options = {
     method: 'GET',
@@ -49,15 +50,15 @@ export default async function Result ({searchTerm, slides}) {
                 <div key={result.fsq_id} className={styles.card}>
                     <ImageSlider slides={slides}/>
                      <Link href={`/details/trail?id=${result.fsq_id}`} key={result.fsq_id} className={styles.text}>
-                         <div key={result.fsq_id} className={styles.text}>
-                                 <h2>{result.name}</h2>
+                         <div key={result.fsq_id} className={`${textStyles.Biennale} ${textStyles.regular}`}>
+                                 <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold}`}>{result.name}</h2>
                                  <p>{result.timezone}</p>
                                  <p>{result.location.formatted_address}</p>
                                  <p>{result.location.postcode}</p>
-                             </div>
+                        </div>
+                        <p className={`${textStyles.Biennale} ${textStyles.regular}`}>Read More</p>
                      </Link>
                 </div>
-                    
                 ))}
             </div>
         </>

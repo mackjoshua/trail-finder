@@ -21,3 +21,8 @@
     padding: 0px 16px;
     font-size: 22px;
 }
+
+.buttons {
+    background: none;
+    border: none;
+}

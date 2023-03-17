@@ -4,56 +4,71 @@ import React, { useContext, useEffect, useState } from 'react'
 import BackButton from './BackButton';
 import { TrailContext } from './Contexts/TrailContext'
 import ShareButton from './ShareButton';
-import styles from './textStyles.module.css'
+import styles from './CSS/textStyles.module.css'
+import styles2 from './CSS/weatherbar.module.css'
+
 // import localFont from '@next/font/dist/local'
 
 // const BiennaleRegular = localFont({ src: 'public/fonts/Biennale/DesktopFonts/TTF/Biennale-Regular.ttf'});
 
 export default function WeatherBar() {
 
-  // const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({});
 
-  // const { dataBrick } = useContext(TrailContext);
+  const { dataBrick } = useContext(TrailContext);
 
-  // let latitude = dataBrick.geocodes?.main?.latitude;
-  // let longitude = dataBrick.geocodes?.main?.longitude;
-  // console.log(latitude);
-  // console.log(longitude);
+  let latitude = dataBrick.geocodes?.main?.latitude;
+  let longitude = dataBrick.geocodes?.main?.longitude;
+  console.log(latitude);
+  console.log(longitude);
   
-  // useEffect(() => {
+  useEffect(() => {
 
-  //     const fetchTheData = async () => {
+      const fetchTheData = async () => {
 
-  //       // URL wasn't being parsed correctly when using template string so I had to concatenate the string this way
-  //       const URL = `http://localhost:3000/api/weather?lat=` + latitude + `&lon=` + longitude;
-  //       const res = await fetch(URL);
-  //       const data = await res.json();
-  //       setWeatherData(data);
-  //     }
-  //     fetchTheData();
-  // },[latitude,longitude]);
+        // URL wasn't being parsed correctly when using template string so I had to concatenate the string this way
+        const URL = `http://localhost:3000/api/weather?lat=` + latitude + `&lon=` + longitude;
+        const res = await fetch(URL);
+        const data = await res.json();
+        setWeatherData(data);
+      }
+      fetchTheData();
+  },[latitude,longitude]);
 
-  // const dailyWeather = weatherData['daily'];
+  const dailyWeather = weatherData['daily'];
 
-  // const sevenDays = dailyWeather?.slice(0,7);
+  const sevenDays = dailyWeather?.slice(0,7);
 
-  // const weatherArray = sevenDays?.map(day => {
-  //   return (
-  //     <p key={day.dt}>{Math.floor(day['temp']['day'])}</p>
-  //   )
-  // });
+  const weatherArray = sevenDays?.map(day => {
 
-  // console.log(dailyWeather, ' here it is');
+    let date = new Date(day.dt * 1000);
+    let text = date.toDateString();
+    let dayOfWeek = text.slice(0,2);
+
+    return (
+      <div key={day.dt} className={styles2.items}>
+        <p>{dayOfWeek}</p>
+         <p key={day.dt}>{Math.floor(day['temp']['day'])}°</p>
+      </div>
+     
+    )
+  });
+
+  console.log(dailyWeather, ' here it is');
+  console.log(sevenDays, 'here are the seven days');
+
+  const daysArray = sevenDays
 
   return (
-    <aside>
+    <aside >
       <BackButton />
       <h3>Weather this week</h3>
-      {/* <div>{dailyWeather.map((day) => {
+      {/* <div className={`${styles.Biennale} ${styles2.containerBar}`}>{dailyWeather?.map((day) => {
         <p>{day?.feels_like?.day}</p>
       })}</div> */}
-      {/* <div>{weatherArray}</div> */}
-      <div className={`${styles.Biennale} ${styles.semiBold}`}>
+      <div className={`${styles.Biennale} ${styles2.containerBar}`}>{weatherArray}</div>
+      {/* <div className={`${styles.Biennale} ${styles.semiBold}`}>
+      <h3>Weather this week</h3>
         <p>77</p>
         <p>87</p>
         <p>97</p>
@@ -61,9 +76,7 @@ export default function WeatherBar() {
         <p>47</p>
         <p>37</p>
         <p>27</p>
-
-
-      </div>
+      </div> */}
       <ShareButton />
     </aside>
 

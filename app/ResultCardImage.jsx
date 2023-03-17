@@ -1,6 +1,6 @@
 
 import Image from "next/image";
-import styles from './rcimage.module.css'
+import styles from './CSS/rcimage.module.css'
 
 const options = {
     method: 'GET',
