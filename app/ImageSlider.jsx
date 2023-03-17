@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import styles from './CSS/imageslider.module.css'
-import leftChevron from 'Illustrations/chevron_left.png'
-import rightChevron from 'Illustrations/chevron_right.png'
+import leftChevron from '../Illustrations/chevron_left.png'
+import rightChevron from '../Illustrations/chevron_right.png'
 
 const options = {
     method: 'GET',
