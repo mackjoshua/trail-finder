@@ -5,6 +5,7 @@ import RCImage from "./ResultCardImage";
 import ImageSlider from "./ImageSlider";
 import styles from './CSS/resultcard.module.css'
 import textStyles from './CSS/textStyles.module.css'
+import orangeArrow from '../Illustrations/arrow_right_orange.png'
 
 const options = {
     method: 'GET',
@@ -39,13 +40,9 @@ export default async function Result ({searchTerm, slides}) {
     // console.log(pizza);
     // console.log(data.results);
     return (
-        <>
-            <div>
-                <h1>Results</h1>
-            </div>
-            
-       
-            <div className={styles.cardContainer}>
+        <section className={styles.wrapper}>
+            <h1 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.results}`}>Results</h1>
+            <div className={styles.cardContainer}>  
                 {results?.map((result) => (
                 <div key={result.fsq_id} className={styles.card}>
                     <ImageSlider slides={slides}/>
@@ -56,11 +53,14 @@ export default async function Result ({searchTerm, slides}) {
                                  <p>{result.location.formatted_address}</p>
                                  <p>{result.location.postcode}</p>
                         </div>
-                        <p className={`${textStyles.Biennale} ${textStyles.regular}`}>Read More</p>
+                        <div className={styles.readMore}>
+                             <p className={`${textStyles.Biennale} ${textStyles.regular}`}>Read More</p>
+                             <Image src={orangeArrow} alt="an orange arrow"/>
+                        </div>
                      </Link>
                 </div>
                 ))}
             </div>
-        </>
+        </section>
     )
 }

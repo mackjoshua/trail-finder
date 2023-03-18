@@ -1,6 +1,8 @@
 .container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 7.5rem;
+    height: auto;
 }
 
 .controls {
@@ -11,5 +13,92 @@
     align-items: center;
     gap: 10rem;
     margin: 0 10rem;
+}
+
+.mountains {
+    position: relative;
+    top: 20em;
+    left: 100em;
+}
+
+.outlineTrees {
+    position: relative;
+    bottom: 10em;
+    left: 100em;
+}
+
+.lineTrees {
+    position: relative;
+    bottom: 42em;
+    left: 10em;
+}
+
+@media (1px < width < 480px) {
+    .controls {
+        margin: 0rem 0rem;
+        gap: 1rem;
+    }
+
+    .outlineTrees {
+        display: none;
+    }
+
+    .lineTrees {
+        display: none;
+    }
+
+    .mountains {
+        display: none;
+    }
+}
+
+@media (479px < width < 768px) {
+    .controls {
+        margin: 0rem 0rem;
+        gap: 1rem;
+    }
+
+    .outlineTrees {
+        display: none;
+    }
+
+    .lineTrees {
+        display: none;
+    }
+
+    .mountains {
+        display: none;
+    }
+}
+
+@media (767px < width < 992px) {
+    .controls {
+        margin: 0rem 0rem;
+        gap: 1rem;
+    }
+
+    .outlineTrees {
+        display: none;
+    }
+
+    .lineTrees {
+        display: none;
+    }
+
+    .mountains {
+        display: none;
+    }
+}
+
+@media (min-width: 991px) {
+    .controls {
+        margin: 0rem 0rem;
+        gap: 1rem;
+        flex-grow: 2;
+    }
+
+    .container {
+        margin: 0rem 28rem;
+    }
 }
 

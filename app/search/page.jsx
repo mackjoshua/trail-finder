@@ -4,6 +4,9 @@ import Result from "../ResultCard"
 import SearchForm from "../SearchForm"
 import styles from './search.module.css'
 import Image from "next/image";
+import mountains from '/Illustrations/Mountains.png'
+import lineTrees from '/Illustrations/Trees.png'
+import outlineTrees from 'Illustrations/Trees-1.png'
 
 
 const options = {
@@ -33,13 +36,17 @@ export default function Page({params, searchParams}) {
     let splitTerm = term.split(/[\s,]+/);
 
     return (
+      <div>
+      <Image src={mountains} alt="Illustration of some mountains" className={styles.mountains}/>
         <div className={styles.container}>
           <div className={styles.controls}>
             <BackButton buttonInstance="searchPage"/>
             <SearchForm slug={searchParams}/>
-            <Image />
           </div>
           <Result searchTerm={splitTerm} slides={slides}/>
         </div>
+        <Image src={lineTrees} alt="Illustration of some trees" className={styles.lineTrees}/>
+        <Image src={outlineTrees} alt="Another illustration of some trees" className={styles.outlineTrees}/>
+      </div>
     )
 }

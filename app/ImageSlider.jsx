@@ -45,7 +45,7 @@ export default function ImageSlider({slides}) {
     }
 
   return (
-    <div style={{height: '100%', position:"relative"}}>
+    <div className={styles.wrapper}>
       <div className={styles.buttonContainer}>
         <button onClick={decrementSlide} className={styles.buttons}>
           <Image src={leftChevron} alt="Image of left Arrow"/>
@@ -54,7 +54,7 @@ export default function ImageSlider({slides}) {
           <Image src={rightChevron} alt="Image of right Arrow"/>
         </button>
       </div>
-        <div style={{backgroundImage: `url(${slides[currentSlide].prefix}original${slides[currentSlide].suffix})`, height: "100%", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+        <div style={{backgroundImage: `url(${slides[currentSlide].prefix}original${slides[currentSlide].suffix})`, height: "100%", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '4px'}}>
            {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}400x100${slides[currentSlide].suffix}`} width={400} height={100}/> */}
            {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}original${slides[currentSlide].suffix}`} width={slides[currentSlide].width} height={slides[currentSlide].height}/> */}
         </div>
