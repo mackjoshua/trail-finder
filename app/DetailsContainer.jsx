@@ -4,6 +4,8 @@ import React from 'react'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useContext } from 'react';
 import { TrailContext } from './Contexts/TrailContext';
+import styles from './CSS/detailsContainer.module.css'
+import textStyles from './CSS/textStyles.module.css'
 
 const options = {
     method: 'GET',
@@ -43,7 +45,7 @@ export default function DetailsContainer() {
 
   
   return (
-    <>
+    <div className={styles.wrapper}>
       <div>
         <h1>{dataBrick.name}</h1>
         <p>Volutpat tellus scelerisuque ornare eleifend aliquam. Parturient in vitae ut volutpat massa scelerisque. Turpis aliquam fringilla lacus interdum ut semper. Senectus id elit eget id ut in diam neque ipsum. Id neque orci est aenean eet. Faucibus ultrices porttitor vulputate in phasellus vulputate porttitor tincidunt et. Turpis consequat aliquet venenatis pellentesque rhoncus vel convallis. Vulputate mauris aadipiscing aliquam rhoncus.</p>
@@ -63,6 +65,6 @@ export default function DetailsContainer() {
           <p>Some random text</p>
         </div>
       </aside>
-    </>
+    </div>
   )
 }

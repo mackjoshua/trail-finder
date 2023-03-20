@@ -1,42 +1,56 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     padding-bottom: 7.5rem;
+    justify-content: center;
+    align-items: center;
     height: auto;
+    position: relative;
+    flex-grow: 1;
+    /* width: 100%; */
 }
 
 .controls {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
-    justify-content: space-between;
+    flex-grow: 2;
+    /* justify-content: space-between; */
     align-items: center;
-    gap: 10rem;
-    margin: 0 10rem;
+    gap: 1rem;
+    /* margin: 0 0rem; */
+    width: 68vw;
+    padding: 4em 0em 7.5em 0em;
 }
 
 .mountains {
-    position: relative;
-    top: 20em;
-    left: 100em;
+    position: absolute;
+    top: 0em;
+    right: 0em;
 }
 
 .outlineTrees {
-    position: relative;
-    bottom: 10em;
-    left: 100em;
+    position: absolute;
+    bottom: 0em;
+    right: 0em;
 }
 
 .lineTrees {
-    position: relative;
-    bottom: 42em;
-    left: 10em;
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
 }
 
 @media (1px < width < 480px) {
     .controls {
         margin: 0rem 0rem;
         gap: 1rem;
+        width: 80vw;
     }
 
     .outlineTrees {
@@ -56,6 +70,7 @@
     .controls {
         margin: 0rem 0rem;
         gap: 1rem;
+        width: 80vw;
     }
 
     .outlineTrees {
@@ -68,6 +83,9 @@
 
     .mountains {
         display: none;
+    }
+    .container {
+        margin: 0rem 0rem;
     }
 }
 
@@ -75,6 +93,7 @@
     .controls {
         margin: 0rem 0rem;
         gap: 1rem;
+        width: 80vw;
     }
 
     .outlineTrees {
@@ -88,17 +107,11 @@
     .mountains {
         display: none;
     }
+    .container {
+        margin: 0rem 0rem;
+    }
 }
 
 @media (min-width: 991px) {
-    .controls {
-        margin: 0rem 0rem;
-        gap: 1rem;
-        flex-grow: 2;
-    }
-
-    .container {
-        margin: 0rem 28rem;
-    }
 }
 

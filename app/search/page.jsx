@@ -36,8 +36,10 @@ export default function Page({params, searchParams}) {
     let splitTerm = term.split(/[\s,]+/);
 
     return (
-      <div>
-      <Image src={mountains} alt="Illustration of some mountains" className={styles.mountains}/>
+      <div className={styles.page}>
+        {/* <Image src={mountains} alt="Illustration of some mountains" className={styles.mountains}/>
+        <Image src={lineTrees} alt="Illustration of some trees" className={styles.lineTrees}/>
+        <Image src={outlineTrees} alt="Another illustration of some trees" className={styles.outlineTrees}/> */}
         <div className={styles.container}>
           <div className={styles.controls}>
             <BackButton buttonInstance="searchPage"/>
@@ -45,8 +47,6 @@ export default function Page({params, searchParams}) {
           </div>
           <Result searchTerm={splitTerm} slides={slides}/>
         </div>
-        <Image src={lineTrees} alt="Illustration of some trees" className={styles.lineTrees}/>
-        <Image src={outlineTrees} alt="Another illustration of some trees" className={styles.outlineTrees}/>
       </div>
     )
 }

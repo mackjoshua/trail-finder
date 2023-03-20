@@ -1,11 +1,14 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid seagreen !important;
-    background: rgb(0, 100, 0 / 0.1) !important; */
+    outline: 1px solid seagreen !important;
+    background: rgb(0, 100, 0 / 0.1) !important;
 }
 
-body {
+html, body {
     background-color: #F0E7D3;
+    width: 100%;
 }
 
 button {

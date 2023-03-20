@@ -16,7 +16,7 @@
     column-gap: 8px;
     row-gap: 8px;
     height: 100%;
-    margin: 0rem 28rem;
+    margin: 0rem 0rem;
     padding-bottom: 7.5em;
 }
 
@@ -28,11 +28,13 @@
 .results {
     color: #402314;
     font-size: 2rem;
+    padding-bottom: 1.5em;
 } 
 
 .wrapper {
     display: flex;
     flex-direction: column;
+    width: 68vw;
 }
 
 .readMore {
@@ -47,7 +49,10 @@
     .cardContainer {
         margin: 0rem 0rem;
         grid-template-columns: 1fr;
+    }
 
+    .wrapper {
+        width: 80vw;
     }
 }
 
@@ -56,13 +61,20 @@
         margin: 0rem 0rem;
         grid-template-columns: 1fr;
     }
+
+    .wrapper {
+        width: 80vw;
+    }
 }
 
 @media (767px < width < 992px) {
     .cardContainer {
         margin: 0rem 0rem;
         grid-template-columns: 1fr;
+    }
 
+    .wrapper {
+        width: 80vw;
     }
 }
 
