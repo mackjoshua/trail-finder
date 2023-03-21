@@ -1,10 +1,26 @@
 .index {
     display: flex;
-    width: 100%;
+    flex-direction: row;
     color: rgba(247, 244, 230, 0.7);
     position: absolute;
     bottom: 5%;
     justify-content: center;
+    align-items: center;
+    background: #F0E7D3;
+    box-shadow: 2px 4px 8px rgba(64, 35, 20, 0.2);
+    border-radius: 4px;
+    padding: 1em 2em;
+    gap: 1em;
+}
+
+.indexResults {
+    display: flex;
+    flex-direction: row;
+    color: rgba(247, 244, 230, 0.7);
+    position: absolute;
+    bottom: 5%;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttonContainer {
@@ -24,9 +40,35 @@
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     height: 30vh;
     position: relative;
+    align-items: center;
+    justify-content: center;
 }
+
+.wrapperDetailsPage {
+    height: 60vh;
+}
+
+.indexIndicator {
+    height: 1em;
+    width: 1em;
+    border: 2px solid #CC3801;
+    border-radius: 1em;
+}
+
+.currentIndex {
+    height: 1em;
+    width: 1em;
+    border: 2px solid #CC3801;
+    border-radius: 1em;
+    background: rgba(204, 56, 1, 0.4);
+
+}
+
+
 
 @media (1px < width < 480px) {
 

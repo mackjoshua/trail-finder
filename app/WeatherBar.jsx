@@ -6,6 +6,8 @@ import { TrailContext } from './Contexts/TrailContext'
 import ShareButton from './ShareButton';
 import styles from './CSS/textStyles.module.css'
 import styles2 from './CSS/weatherbar.module.css'
+import Image from 'next/image';
+import orangeShareButton from '../Illustrations/orangeShareButton.png';
 
 // import localFont from '@next/font/dist/local'
 
@@ -48,7 +50,7 @@ export default function WeatherBar() {
     return (
       <div key={day.dt} className={styles2.items}>
         <p>{dayOfWeek}</p>
-         <p key={day.dt}>{Math.floor(day['temp']['day'])}°</p>
+        <p key={day.dt}>{Math.floor(day['temp']['day'])}°</p>
       </div>
      
     )
@@ -60,9 +62,10 @@ export default function WeatherBar() {
   const daysArray = sevenDays
 
   return (
-    <aside >
-      <BackButton />
-      <h3>Weather this week</h3>
+    <aside className={styles2.wrapper}>
+      <div className={styles2.buttonContainer}>
+        <BackButton />
+      </div>
       {/* <div className={`${styles.Biennale} ${styles2.containerBar}`}>{dailyWeather?.map((day) => {
         <p>{day?.feels_like?.day}</p>
       })}</div> */}
@@ -77,7 +80,11 @@ export default function WeatherBar() {
         <p>37</p>
         <p>27</p>
       </div> */}
-      <ShareButton />
+      <div className={styles2.buttonContainer}>
+        <ShareButton color="orange">
+          <Image alt='An icon of the share image' src={orangeShareButton}/>
+        </ShareButton>
+      </div>
     </aside>
 
   )

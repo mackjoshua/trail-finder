@@ -17,9 +17,11 @@ export default function TrailsPageWrapper({slides}) {
   return (
     <>
     <TrailContext.Provider value={{dataBrick, setDataBrick}}>
-        <WeatherBar />
         <div className={styles.container}>
-          <ImageSlider slides={slides}/>
+          <div className={styles.weatherBar}>
+            <WeatherBar />
+          </div>
+          <ImageSlider slides={slides} location='details'/>
         </div>
         <DetailsContainer />
     </TrailContext.Provider>

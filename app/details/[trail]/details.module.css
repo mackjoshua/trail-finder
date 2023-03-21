@@ -1,3 +1,10 @@
 .container {
-    height: 30vh;
+    height: 60vh;
+}
+
+.weatherBar {
+    position: absolute;
+    top: 4em;
+    z-index: 3;
+    width: 100%;
 }
