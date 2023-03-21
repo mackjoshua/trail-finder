@@ -45,6 +45,10 @@
     justify-content: flex-end;
 }
 
+.textContainer {
+    padding-top: 1em;
+}
+
 @media (1px < width < 480px) {
     .cardContainer {
         margin: 0rem 0rem;
@@ -52,7 +56,7 @@
     }
 
     .wrapper {
-        width: 80vw;
+        width: 90vw;
     }
 }
 
@@ -63,7 +67,7 @@
     }
 
     .wrapper {
-        width: 80vw;
+        width: 90vw;
     }
 }
 

@@ -45,26 +45,30 @@ export default function DetailsContainer() {
 
   
   return (
-    <div className={styles.wrapper}>
-      <div>
-        <h1>{dataBrick.name}</h1>
-        <p>Volutpat tellus scelerisuque ornare eleifend aliquam. Parturient in vitae ut volutpat massa scelerisque. Turpis aliquam fringilla lacus interdum ut semper. Senectus id elit eget id ut in diam neque ipsum. Id neque orci est aenean eet. Faucibus ultrices porttitor vulputate in phasellus vulputate porttitor tincidunt et. Turpis consequat aliquet venenatis pellentesque rhoncus vel convallis. Vulputate mauris aadipiscing aliquam rhoncus.</p>
+    <div className={styles.outerWrapper}>
+        <div className={styles.wrapper}>
+          <div>
+            {/* <h1>{dataBrick.name}</h1> */}
+            <h1 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.text}`}>Walnut Acres Trails</h1>
+            <p className={`${textStyles.Biennale} ${textStyles.regular}`}>Volutpat tellus scelerisuque ornare eleifend aliquam. Parturient in vitae ut volutpat massa scelerisque. Turpis aliquam fringilla lacus interdum ut semper. Senectus id elit eget id ut in diam neque ipsum. Id neque orci est aenean eet. Faucibus ultrices porttitor vulputate in phasellus vulputate porttitor tincidunt et. Turpis consequat aliquet venenatis pellentesque rhoncus vel convallis. Vulputate mauris aadipiscing aliquam rhoncus.</p>
+          </div>
+          <aside className={styles.quickFactsCard}>
+            <h2 className={`${styles.quickFactsTitle} ${textStyles.Biennale} ${textStyles.semiBold}`}>Quick Facts</h2>
+            <div className={styles.fact}>
+              <h3 className={`${textStyles.Biennale} ${textStyles.regular}`}>Fact 1</h3>
+              <p className={`${textStyles.Biennale} ${textStyles.book}`}>Congue neque est curabitur aliquet aliquam at nisi. Feugiat donec mi libero nisi in nisl in tincidunt est. Aliquet fringilla sapien a rhoncus.</p>
+            </div>
+            <div className={styles.fact}>
+              <h3 className={`${textStyles.Biennale} ${textStyles.regular}`}>Fact 2</h3>
+              <p className={`${textStyles.Biennale} ${textStyles.book}`}>Congue neque est curabitur aliquet aliquam at nisi. Feugiat donec mi libero nisi in nisl in tincidunt est. Aliquet fringilla sapien a rhoncus.</p>
+            </div>
+            <div className={styles.fact}>
+              <h3 className={`${textStyles.Biennale} ${textStyles.regular}`}>Fact 3</h3>
+              <p className={`${textStyles.Biennale} ${textStyles.book}`}>Congue neque est curabitur aliquet aliquam at nisi. Feugiat donec mi libero nisi in nisl in tincidunt est. Aliquet fringilla sapien a rhoncus.</p>
+            </div>
+          </aside>
       </div>
-      <aside>
-        <h2>Quick Facts</h2>
-        <div>
-          <h3>Fact 1</h3>
-          <p>Some random text</p>
-        </div>
-        <div>
-          <h3>Fact 2</h3>
-          <p>Some random text</p>
-        </div>
-        <div>
-          <h3>Fact 3</h3>
-          <p>Some random text</p>
-        </div>
-      </aside>
-    </div>
+   </div>
+     
   )
 }

@@ -1,8 +1,41 @@
 .wrapper {
     display: flex;
     flex-direction: row;
-    width: auto;
-    margin: 0 12rem;
     justify-content: center;
     gap: 10rem;
+    width: 68vw;
 }
+
+.text {
+    color: #402314;
+    padding-bottom: 1.25em;
+}
+
+.outerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7.5em;
+}
+
+.quickFactsTitle {
+    flex-wrap: nowrap;
+    color: #CC3801;
+}
+
+.quickFactsCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f4e6;
+    border: 1px solid #d1c9b8;
+    border-radius: 8px;
+    padding: 1.5em;
+    gap: 2em;
+}
+
+.fact {
+    width: 100%;
+}
+

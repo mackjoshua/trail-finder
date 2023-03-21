@@ -30,27 +30,27 @@
 
 .mountains {
     position: absolute;
-    top: 0em;
-    right: 0em;
+    top: 24em;
+    right: 6.2em;
 }
 
 .outlineTrees {
     position: absolute;
-    bottom: 0em;
-    right: 0em;
+    bottom: -18em;
+    right: 6em;
 }
 
 .lineTrees {
     position: absolute;
-    bottom: 0em;
-    left: 0em;
+    bottom: -4em;
+    left: 6em;
 }
 
 @media (1px < width < 480px) {
     .controls {
         margin: 0rem 0rem;
         gap: 1rem;
-        width: 80vw;
+        width: 90vw;
     }
 
     .outlineTrees {
@@ -70,7 +70,7 @@
     .controls {
         margin: 0rem 0rem;
         gap: 1rem;
-        width: 80vw;
+        width: 90vw;
     }
 
     .outlineTrees {

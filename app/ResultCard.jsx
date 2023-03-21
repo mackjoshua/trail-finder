@@ -47,7 +47,7 @@ export default async function Result ({searchTerm, slides}) {
                 <div key={result.fsq_id} className={styles.card}>
                     <ImageSlider slides={slides}/>
                      <Link href={`/details/trail?id=${result.fsq_id}`} key={result.fsq_id} className={styles.text}>
-                         <div key={result.fsq_id} className={`${textStyles.Biennale} ${textStyles.regular}`}>
+                         <div key={result.fsq_id} className={`${textStyles.Biennale} ${textStyles.regular} ${styles.textContainer}`}>
                                  <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold}`}>{result.name}</h2>
                                  <p>{result.timezone}</p>
                                  <p>{result.location.formatted_address}</p>
