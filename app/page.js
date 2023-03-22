@@ -72,21 +72,21 @@ export default function Home() {
             <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.HIWHeading}`}>How it works</h2>
             <div className={styles.HIWInnerWrapper}>
               <div className={styles.numberWrapper}><p className={`${textStyles.Biennale} ${textStyles.medium}`}>1</p></div>
-              <div>
+              <div className={`${styles.lineHeight160}`}>
                 <h3 className={`${textStyles.HVAnalogue} ${textStyles.regular}`}>Enter your location</h3>
                 <p className={`${textStyles.Biennale} ${textStyles.regular}`}>This is a description of a step in the process of how the web app works. The purpose is to provide more explanation of the functionality of the web app, and get visitors more intrigued to use it.</p>
               </div>
             </div>
             <div className={styles.HIWInnerWrapper}>
               <div className={styles.numberWrapper}><p className={`${textStyles.Biennale} ${textStyles.medium}`}>2</p></div>
-              <div>
+              <div className={`${styles.lineHeight160}`}>
                 <h3 className={`${textStyles.HVAnalogue} ${textStyles.regular}`}>Find a great trail</h3>
                 <p className={`${textStyles.Biennale} ${textStyles.regular}`}>This is a description of a step in the process of how the web app works. The purpose is to provide more explanation of the functionality of the web app, and get visitors more intrigued to use it.</p>
               </div>
             </div>
             <div className={styles.HIWInnerWrapper}>
               <div className={styles.numberWrapper}><p className={`${textStyles.Biennale} ${textStyles.medium}`}>3</p></div>
-              <div className={styles.finalStep}>
+              <div className={`${styles.finalStep} ${styles.lineHeight160}`}>
                 <h3 className={`${textStyles.HVAnalogue} ${textStyles.regular}`}>Save and share with friends</h3>
                 <p className={`${textStyles.Biennale} ${textStyles.regular}`}>This is a description of a step in the process of how the web app works. The purpose is to provide more explanation of the functionality of the web app, and get visitors more intrigued to use it.</p>
               </div>
@@ -110,7 +110,7 @@ export default function Home() {
       </div>
       <div className={styles.finalCTAWrapper}>
         <Image src={wavySun} alt="An illustration of a wavy sun"/>
-        <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold}`}>What are you waiting for? Come hike now!</h2>
+        <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.finalCTAText}`}>What are you waiting for? Come hike now!</h2>
         <div className={`${styles.searchBarContainer} ${styles.extraPadding}`}>
          <SearchForm />
         </div>

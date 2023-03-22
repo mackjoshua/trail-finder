@@ -100,6 +100,7 @@
     flex-direction: row;
     align-items: flex-start;
     gap: 3em;
+    width: 40vw;
 }
 
 .HIWHeading {
@@ -225,4 +226,243 @@
     position: absolute;
     top: -2.5em;
     left: -1em;
+}
+
+.lineHeight160 {
+    line-height: 160%;
+}
+
+.finalCTAText {
+    color: #402314;
+}
+
+@media (1px < width < 480px) {
+ .heroTextContainer {
+    width: 90vw;
+    padding-top: 4em;
+ }
+ .heroText {
+    text-align: left;
+ }
+ .searchBarContainer {
+    width: 90vw;
+ }
+ .heroImageWrapper {
+    padding-bottom: 8em;
+ }
+ .midSectionWrapper {
+    padding-top: 8em;
+ }
+ .features {
+    flex-direction: column;
+    width: 90vw;
+    gap: 8em;
+ }
+ .featureBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2em;
+ }
+ .featuresHeadline {
+    padding-bottom: 2em;
+ }
+ .imageWrapper {
+    height: auto;
+ }
+ .howItWorksSection {
+    padding-top: 16em;
+ }
+ .howItWorksWrapper {
+    width: 90vw;
+    gap: 4em;
+ }
+ .HIWInnerWrapper {
+    gap: 2em;
+    width: 90vw;
+ }
+ .finalStep {
+    padding-bottom: 8em;
+ }
+ .innerTestimonialWrapper {
+    width: 90vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .testimonialImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+ }
+ .testimonialText {
+    gap: 2em;
+ }
+ .finalCTAText {
+    text-align: center;
+ }
+ .creditsContainer {
+    margin-top: 0em;
+ }
+ .innerCreditsContainer {
+    width: 90vw;
+ }
+}
+
+@media (479px < width < 768px) {
+    .heroTextContainer {
+        width: 90vw;
+        padding-top: 4em;
+     }
+     .heroText {
+        text-align: left;
+     }
+     .searchBarContainer {
+        width: 90vw;
+     }
+     .heroImageWrapper {
+        padding-bottom: 8em;
+     }
+     .midSectionWrapper {
+        padding-top: 8em;
+     }
+     .features {
+        flex-direction: column;
+        width: 90vw;
+        gap: 8em;
+     }
+     .featureBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2em;
+     }
+     .featuresHeadline {
+        padding-bottom: 2em;
+     }
+     .imageWrapper {
+        height: auto;
+     }
+     .howItWorksSection {
+        padding-top: 16em;
+     }
+     .howItWorksWrapper {
+        width: 90vw;
+        gap: 4em;
+     }
+     .HIWInnerWrapper {
+        gap: 2em;
+        width: 90vw;
+     }
+     .finalStep {
+        padding-bottom: 8em;
+     }
+     .innerTestimonialWrapper {
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .testimonialImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+     }
+     .testimonialText {
+        gap: 2em;
+     }
+     .finalCTAText {
+        text-align: center;
+     }
+     .creditsContainer {
+        margin-top: 0em;
+     }
+     .innerCreditsContainer {
+        width: 90vw;
+     }
+}
+
+@media (767px < width < 992px) {
+    .heroTextContainer {
+        width: 90vw;
+        padding-top: 4em;
+     }
+     .heroText {
+        text-align: left;
+     }
+     .searchBarContainer {
+        width: 90vw;
+     }
+     .heroImageWrapper {
+        padding-bottom: 8em;
+     }
+     .midSectionWrapper {
+        padding-top: 8em;
+     }
+     .features {
+        flex-direction: column;
+        width: 90vw;
+        gap: 8em;
+     }
+     .featureBlock {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2em;
+        align-items: center;
+        justify-content: center;
+     }
+     .featuresHeadline {
+        padding-bottom: 2em;
+     }
+     .imageWrapper {
+        height: auto;
+     }
+     .howItWorksSection {
+        padding-top: 16em;
+     }
+     .howItWorksWrapper {
+        width: 90vw;
+        gap: 4em;
+     }
+     .HIWInnerWrapper {
+        gap: 2em;
+        width: 90vw;
+     }
+     .finalStep {
+        padding-bottom: 8em;
+     }
+     .innerTestimonialWrapper {
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     .testimonialImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+     }
+     .testimonialText {
+        gap: 2em;
+     }
+     .finalCTAText {
+        text-align: center;
+     }
+     .creditsContainer {
+        margin-top: 0em;
+     }
+     .innerCreditsContainer {
+        width: 90vw;
+     }
+     .textBlock {
+        align-self: auto;
+     }
+}
+
+@media (min-width: 991px) {
+
 }
