@@ -1,0 +1,228 @@
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroHeading {
+    font-size: 4.5em;
+    color: #402314;
+}
+
+.heroImageWrapper {
+    padding-bottom: 12.5em;
+}
+
+.heroText {
+    font-size: 1.25em;
+    text-align: center;
+    line-height: 160%;
+}
+
+.heroTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 68vw;
+    gap: 2em;
+    padding-bottom: 7.5em;
+    padding-top: 12.5em;
+}
+
+.searchBarContainer {
+    display: flex;
+    width: 30vw;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 7.5em;
+}
+
+.midSectionWrapper {
+    padding-top: 12.5em;
+    border-top: 1px solid #E3D3B1;
+    border-bottom: 1px solid #E3D3B1;
+}
+
+.featuresSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    width: 68vw;
+    flex-grow: 1;
+}
+
+.featuresHeadline {
+    padding-bottom: 4em;
+    font-size: 2em;
+    color: #402314;
+}
+
+.featureBlock {
+    text-align: center;
+    width: 33.33%;
+    color: #402314;
+}
+
+.textBlock {
+    align-self: flex-end;
+}
+
+.imageWrapper {
+    height: 20vh;
+}
+
+.howItWorksSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15em;
+}
+
+.howItWorksWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 68vw;
+    gap: 2em;
+}
+
+.HIWInnerWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3em;
+}
+
+.HIWHeading {
+    font-size: 3em;
+    color: #402314;
+}
+
+.numberWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #402314;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 0.5em;
+    text-align: center;
+
+    font-size: 24px;
+}
+
+.trees {
+    position: absolute;
+    bottom: 0em;
+    right: 0em;
+}
+
+.finalStep {
+    padding-bottom: 12.5em;
+}
+
+.testimonialWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #E3D3B1;
+    padding-top: 7.5em;
+    padding-bottom: 7.5em;
+}
+
+.innerTestimonialWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 68vw;
+    gap: 3em;
+}
+
+.testimonialImage {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.flower {
+    position: absolute;
+}
+
+.topLeft {
+    top: -1em;
+    left: -1em;
+}
+
+.bottomRight {
+    bottom: -1em;
+    right: -1em;
+}
+
+.testimonialText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.orangeText {
+    color: #CC3801;
+}
+
+.testimonialParagraph {
+    line-height: 160%;
+    color: #402314;
+}
+
+.finalCTAWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding-top: 7.5em;
+}
+
+.extraPadding {
+    padding-top: 2em;
+}
+
+.creditsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12.5em;
+}
+
+.innerCreditsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32vw;
+    border-top: 1px solid #402314;
+    padding: 1em;
+}
+
+.link {
+    text-decoration: none;
+    color: #CC3801;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #CC3801;
+}
+
+.mountains {
+    position: absolute;
+    top: -2.5em;
+    left: -1em;
+}

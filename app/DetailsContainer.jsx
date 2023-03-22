@@ -52,7 +52,7 @@ export default function DetailsContainer() {
         <div className={styles.wrapper}>
           <div>
             {/* <h1>{dataBrick.name}</h1> */}
-            <h1 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.text}`}>Walnut Acres Trails</h1>
+            <h1 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.text}`}>{dataBrick.name}</h1>
             <p className={`${textStyles.Biennale} ${textStyles.regular}`}>Volutpat tellus scelerisuque ornare eleifend aliquam. Parturient in vitae ut volutpat massa scelerisque. Turpis aliquam fringilla lacus interdum ut semper. Senectus id elit eget id ut in diam neque ipsum. Id neque orci est aenean eet. Faucibus ultrices porttitor vulputate in phasellus vulputate porttitor tincidunt et. Turpis consequat aliquet venenatis pellentesque rhoncus vel convallis. Vulputate mauris aadipiscing aliquam rhoncus.</p>
           </div>
           <aside className={styles.quickFactsCard}>

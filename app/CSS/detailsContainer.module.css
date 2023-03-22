@@ -88,10 +88,14 @@
      }
 }
 
-@media (767px < width < 992px) {
-
+@media (767px < width < 1200px) {
+    .wrapper {
+        flex-direction: column;
+        width: 90vw;
+     }
+     .trees {
+        left: 2em;
+     }
 }
 
-@media (min-width: 991px) {
 
-}
