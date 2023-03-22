@@ -59,7 +59,7 @@ export default function ImageSlider({slides, location}) {
             <Image src={orangeLeftChevron} alt="Image of left Arrow"/>
           </button>
             {slides.map((slide, slideIndex) => ( 
-            <div key={slide} onClick={() => {setSlide(slideIndex)}}>
+            <div key={Math.random()} onClick={() => {setSlide(slideIndex)}}>
               <div className={currentSlide === slideIndex ? styles.currentIndex : styles.indexIndicator}> </div>
             </div>
             ))}

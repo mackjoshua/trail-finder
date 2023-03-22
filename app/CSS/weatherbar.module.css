@@ -44,3 +44,28 @@
     border-radius: 4em;
     background: #F7F4e6;
 }
+
+@media (1px < width < 480px) {
+ .containerBar {
+    gap: 1.25em;
+ }
+ .wrapper {
+    padding: 0em 0em;
+    justify-content: center;
+ }
+ .buttonContainer {
+    display: none;
+ }
+}
+
+@media (479px < width < 768px) {
+
+}
+
+@media (767px < width < 992px) {
+
+}
+
+@media (min-width: 991px) {
+
+}
