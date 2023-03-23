@@ -12,6 +12,10 @@ import searchIcon from '../Illustrations/search.png'
 
 export default function SearchForm({children}) {
 
+  function containsOnlyNumbers(str) {
+    return /^\d+$/.test(str); 
+  }
+
   const router = useRouter();
 
   const [address, setAddress] = useState('');
@@ -21,11 +25,18 @@ export default function SearchForm({children}) {
       e.preventDefault();
 
         const term = searchInputRef.current.value;
-        let splitTerm = term.split(/[\s,]+/);
 
-        if(!splitTerm) return;
-        router.push(`search?categories=16019&near=${splitTerm[0]}%2C%20${splitTerm[1]}`);
+        // This if else block handles both zipcodes and City, State inputs
+        if (term.length === 5 && containsOnlyNumbers(term)) {
+          router.push(`search?categories=16019&near=${term}`)
+        } else {
+          let splitTerm = term.split(/[\s,]+/);
 
+          if(!splitTerm) return;
+          router.push(`search?categories=16019&near=${splitTerm[0]}%2C%20${splitTerm[1]}`);  
+        }
+
+       
         // const form = e.target;
         // const formData = new FormData(form);
 

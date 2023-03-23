@@ -28,9 +28,9 @@ const getPhotos = async () => {
   
   const slides = await getPhotos();
 
-export default function Page({params, searchParams}) {
+export default function Page({searchParams}) {
 
-    console.log(searchParams.near);
+    console.log(searchParams.near, 'Occuring on the Search Page');
     console.log(typeof searchParams.near);
     let term = searchParams.near;
     let splitTerm = term.split(/[\s,]+/);
@@ -42,7 +42,8 @@ export default function Page({params, searchParams}) {
         <div className={styles.container}>
           <div className={styles.controls}>
             <BackButton buttonInstance="searchPage"/>
-            <SearchForm slug={searchParams}/>
+            {/* Deleted slug prop from searchForm @ 9:50AM 3/23/23 */}
+            <SearchForm  />
           </div>
           <Result searchTerm={splitTerm} slides={slides}/>
         </div>

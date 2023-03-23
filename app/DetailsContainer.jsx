@@ -27,12 +27,7 @@ export default function DetailsContainer() {
 
   const router = useRouter();
   const searchParams = useSearchParams();
-  const search = searchParams.get('id');
-
-  const id = router.query;
-
-  
-
+  const search = searchParams.get('id');  
 
   useEffect(() => {
     const fetchData = async () => {
