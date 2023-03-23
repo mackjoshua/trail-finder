@@ -50,7 +50,7 @@ export default function ImageSlider({slides, location}) {
     if (location === 'details') {
       return (
         <div className={`${styles.wrapper} ${styles.wrapperDetailsPage}`}>
-            <div style={{backgroundImage: `url(${slides[currentSlide].prefix}original${slides[currentSlide].suffix})`, height: "60vh", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
+            <div style={{backgroundImage: `url(${slides[currentSlide].prefix}original${slides[currentSlide].suffix})`, height: "70vh", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
               {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}400x100${slides[currentSlide].suffix}`} width={400} height={100}/> */}
               {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}original${slides[currentSlide].suffix}`} width={slides[currentSlide].width} height={slides[currentSlide].height}/> */}
           </div>

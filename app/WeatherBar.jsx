@@ -16,6 +16,7 @@ import orangeShareButton from '../Illustrations/orangeShareButton.png';
 export default function WeatherBar() {
 
   const [weatherData, setWeatherData] = useState({});
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const { dataBrick } = useContext(TrailContext);
 
@@ -33,6 +34,7 @@ export default function WeatherBar() {
         const res = await fetch(URL);
         const data = await res.json();
         setWeatherData(data);
+        setIsLoaded(true);
       }
       fetchTheData();
   },[latitude,longitude]);
@@ -69,7 +71,7 @@ export default function WeatherBar() {
       {/* <div className={`${styles.Biennale} ${styles2.containerBar}`}>{dailyWeather?.map((day) => {
         <p>{day?.feels_like?.day}</p>
       })}</div> */}
-      <div className={`${styles.Biennale} ${styles2.containerBar}`}>{weatherArray}</div>
+      <div className={`${styles.Biennale} ${styles2.containerBar}`}>{isLoaded ? weatherArray : <p>Not Loaded yet</p>}</div>
       {/* <div className={`${styles.Biennale} ${styles.semiBold}`}>
       <h3>Weather this week</h3>
         <p>77</p>

@@ -17,6 +17,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 10px;
+    width: auto;
 }
 
 
@@ -59,11 +60,24 @@
 }
 
 @media (479px < width < 768px) {
-
+    .containerBar {
+        gap: 1.25em;
+     }
+     .wrapper {
+        padding: 0em 0em;
+        justify-content: space-around;
+     }
 }
 
 @media (767px < width < 992px) {
-
+    .containerBar {
+        gap: 1.25em;
+     }
+     .wrapper {
+        width: auto;
+        padding: 0em 0em;
+        justify-content: space-around;
+     }
 }
 
 @media (min-width: 991px) {
