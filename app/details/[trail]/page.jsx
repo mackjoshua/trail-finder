@@ -5,7 +5,6 @@ import DetailsContainer from '@/app/DetailsContainer';
 import WeatherBar from '@/app/WeatherBar';
 import { useContext } from 'react';
 import TrailsPageWrapper from '@/app/TrailsPageWrapper';
-import localFont from '@next/font/dist/local';
 
 
 
@@ -30,9 +29,10 @@ const getPhotos = async () => {
 const slides = await getPhotos();
 
 export default function Page() {
+
   return (
     <>
-        <TrailsPageWrapper slides={slides}/>
+        <TrailsPageWrapper slides={slides} />
     </>
   )
 }

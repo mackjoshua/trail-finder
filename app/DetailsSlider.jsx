@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import styles from './CSS/imageslider.module.css'
 import leftChevron from 'Illustrations/chevron_left.png'
@@ -19,14 +19,20 @@ const options = {
   };
 
   
-export default function ImageSlider({location, fsq_ID}) {
+export default function DetailsSlider({location, fsq_ID}) { 
+
+        // Grabbing the pathname
+
+        const params = useSearchParams();
+        const fsqID = params.get('id'); 
+        console.log(fsqID);
 
     const [photos, setPhotos] = useState([]);
 
 
     useEffect(() => {
       const fetchData = async () => {
-        const URL = `http://localhost:3000/api/photosfetch?id=` + fsq_ID;
+        const URL = `http://localhost:3000/api/photosfetch?id=` + fsqID;
         const res = await fetch(URL);
         const data = await res.json();
         // console.log(data, 'Here it is Joshua');
@@ -41,12 +47,7 @@ export default function ImageSlider({location, fsq_ID}) {
 
     const slidesLength = photos.length;
 
-    const [currentSlide, setSlide] = useState(0);
-
-    // Grabbing the pathname
-
-    const pathname = usePathname();
-    const fsqID = pathname.replace('/details/','');  
+    const [currentSlide, setSlide] = useState(0); 
   
     function incrementSlide() {
       if (currentSlide === (slidesLength - 1)) {
@@ -65,7 +66,7 @@ export default function ImageSlider({location, fsq_ID}) {
       }
     }
 
-    if (location === 'details') {
+ 
       return (
         <div className={`${styles.wrapper} ${styles.wrapperDetailsPage}`}>
             <div style={{backgroundImage: `url(${photos[currentSlide]?.prefix}original${photos[currentSlide]?.suffix})`, height: "70vh", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'}}>
@@ -87,27 +88,4 @@ export default function ImageSlider({location, fsq_ID}) {
           </div>
       </div>
       )
-    } else {
-      return (
-        <div className={styles.wrapper}>
-          <div className={styles.buttonContainer}>
-            <button onClick={decrementSlide} className={styles.buttons}>
-              <Image src={leftChevron} alt="Image of left Arrow"/>
-            </button>
-            <button className={styles.buttons}onClick={incrementSlide}>
-              <Image src={rightChevron} alt="Image of right Arrow"/>
-            </button>
-          </div>
-            <div style={{backgroundImage: `url(${photos[currentSlide]?.prefix}original${photos[currentSlide]?.suffix})`, height: "100%", width: "100%", backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover', borderRadius: '4px'}}>
-               {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}400x100${slides[currentSlide].suffix}`} width={400} height={100}/> */}
-               {/* <Image alt="Trails in the Santa Monica Mountains" src={`${slides[currentSlide].prefix}original${slides[currentSlide].suffix}`} width={slides[currentSlide].width} height={slides[currentSlide].height}/> */}
-            </div>
-            <div className={styles.indexResults}>
-              {photos?.map((slide, slideIndex) => ( 
-              <div key={slideIndex} onClick={() => {setSlide(slideIndex)}}>⬤</div>
-              ))}
-            </div>
-        </div>
-      )
-    }
 }

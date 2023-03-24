@@ -18,24 +18,26 @@ const options = {
 
 // This function needs to be able to handle ZIP Code input
 async function getData(city,state) {
-    const res = await fetch('http://localhost:3000/api/places');
-    // const res = await fetch(`https://api.foursquare.com/v3/places/search?categories=16019&near=${city}%2C%20${state}`, options);
+    // const res = await fetch('http://localhost:3000/api/places');
+    const res = await fetch(`https://api.foursquare.com/v3/places/search?categories=16019&near=${city}%2C%20${state}`, options);
     let results = await res.json();
     // console.log(results);
     return results;
 }
 
 async function getDataZip(ZIPCODE) {
-    const res = await fetch('http://localhost:3000/api/places');
-    // const res = await fetch(`https://api.foursquare.com/v3/places/search?categories=16019&near=${ZIPCODE}`, options);
+    // const res = await fetch('http://localhost:3000/api/places');
+    const res = await fetch(`https://api.foursquare.com/v3/places/search?categories=16019&near=${ZIPCODE}`, options);
     let results = await res.json();
     // console.log(results);
     return results;
 }
 
-// async function getAddress() {
-//     const res = await fetch('http://localhost:3000/api/userinput');
-//     // console.log(res.json());
+// async function getPhotos(fsq_ID) {
+//     const URL = `http://localhost:3000/api/photosfetch?id=` + fsq_ID;
+//     const res = await fetch(URL);
+//     const data = await res.json();
+//     return data
 // }
 
 export default async function Result ({searchTerm, slides}) {
@@ -48,9 +50,16 @@ const renderFunction = (results) =>
     <section className={styles.wrapper}>
         <h1 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.results}`}>Results</h1>
         <div className={styles.cardContainer}>  
-            {results?.map((result) => (
+            {results?.map( (result) => { 
+
+                // let pizza = getPhotos(result.fsq_id).then(value => {
+                //     console.log(value, 'Here is the pizza');
+                //     return value
+                // });
+                
+                return (
             <div key={result.fsq_id} className={styles.card}>
-                <ImageSlider slides={slides}/>
+                <ImageSlider slides={slides} fsq_ID={result.fsq_id}/>
                 <Link href={`/details/trail?id=${result.fsq_id}`} key={result.fsq_id} className={styles.text}>
                     <div key={result.fsq_id} className={`${textStyles.Biennale} ${textStyles.regular} ${styles.textContainer}`}>
                             <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold}`}>{result.name}</h2>
@@ -64,7 +73,7 @@ const renderFunction = (results) =>
                     </div>
                 </Link>
             </div>
-            ))}
+            )})}
         </div>
     </section>
 
@@ -78,8 +87,8 @@ const renderFunction = (results) =>
     } else {
         let theCity = searchTerm[0];
         let theState = searchTerm[1]
-        // let  { results } =  await getData(theCity,theState);
-        let { results }  = await getData();
+        let  { results } =  await getData(theCity,theState);
+        // let { results }  = await getData();
         return (
             <>
                 {renderFunction(results)}

@@ -1,0 +1,13 @@
+.attrTagWrapper {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4em;
+
+}
+.attrTag {
+    width: auto;
+    height: 3em;
+}

@@ -9,6 +9,7 @@ import textStyles from './CSS/textStyles.module.css'
 import Image from 'next/image';
 import flower from '../Illustrations/Flower.png'
 import trees from '../Illustrations/Trees.png'
+import AttributionTag from './AttributionTag';
 
 const options = {
     method: 'GET',
@@ -69,6 +70,7 @@ export default function DetailsContainer() {
           </aside>
       </div>
       <Image src={trees} alt="" className={styles.trees}/>
+      <AttributionTag />
    </div>
      
   )

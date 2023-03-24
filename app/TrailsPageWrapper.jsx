@@ -1,17 +1,23 @@
 'use client'
 
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import DetailsContainer from './DetailsContainer'
-import ImageSlider from './ImageSlider'
+import DetailsSlider from './DetailsSlider'
 import WeatherBar from './WeatherBar'
 import styles from './details/[trail]/details.module.css'
 import { TrailContext } from './Contexts/TrailContext'
 import ShareButton from './ShareButton'
 
 
-export default function TrailsPageWrapper({slides}) {
+export default function TrailsPageWrapper({slides, fsqID}) {
 
     const [dataBrick, setDataBrick] = useState({});
+
+    console.log(dataBrick, 'Here it is man');
+
+    useEffect(() => {
+      window.scrollTo(0,0)
+    }, []);
 
 
   return (
@@ -21,7 +27,7 @@ export default function TrailsPageWrapper({slides}) {
           <div className={styles.weatherBar}>
             <WeatherBar />
           </div>
-          <ImageSlider slides={slides} location='details'/>
+          <DetailsSlider slides={slides} location='details' fsq_ID={dataBrick.fsq_id}/>
         </div>
         <DetailsContainer />
     </TrailContext.Provider>

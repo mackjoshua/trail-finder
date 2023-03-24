@@ -7,6 +7,7 @@ import Image from "next/image";
 import mountains from '/Illustrations/Mountains.png'
 import lineTrees from '/Illustrations/Trees.png'
 import outlineTrees from 'Illustrations/Trees-1.png'
+import AttributionTag from "../AttributionTag";
 
 
 const options = {
@@ -19,6 +20,7 @@ const options = {
 
 const getPhotos = async () => {
     const URL = 'http://localhost:3000/api/placesphotos';
+    // const URL = `https://api.foursquare.com/v3/places/${fsq_id}/photos`
     const res = await fetch(URL, options);
     const slides = await res.json();
     // console.log(typeof await res.json());
@@ -49,6 +51,7 @@ export default function Page({searchParams}) {
         </div>
         <Image src={lineTrees} alt="Illustration of some trees" className={styles.lineTrees}/>
         <Image src={outlineTrees} alt="Another illustration of some trees" className={styles.outlineTrees}/>
+        <AttributionTag />
       </div>
     )
 }
