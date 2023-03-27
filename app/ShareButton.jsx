@@ -31,17 +31,4 @@ export default function ShareButton({color}) {
       </RWebShare>
     )
   }
-
-  // return (
-  //   <>
-  //   <RWebShare
-  //       data={{url:'https://natgeo.com/2zHaNup'}}
-  //       onClick={() => console.log('Successful share')}
-  //   >
-  //       <button> 
-        
-  //       </button>
-  //   </RWebShare>
-  //   </>
-  // )
 }

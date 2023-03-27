@@ -11,13 +11,6 @@ const options = {
 };
 
 
-// async function getData() {
-//     const res = await fetch(`https://api.foursquare.com/v3/places/${fsqID}/photos`);
-//     return JSON.parse(res);
-// }
-
-
-
 export default async function RCImage({fsqID}) { 
     let tester = fsqID;
     // const URL = `https://api.foursquare.com/v3/places/${tester}/photos`;
@@ -30,8 +23,6 @@ export default async function RCImage({fsqID}) {
     }
     
     
-    // console.log(typeof results, 'Here they are');
-    // console.log(results);
     return <div className={styles.container}>
         <div>{typeof results !== "string" ? results.map((result) => (<div key={result.id}> <Image alt="alt"src={`${result.prefix}100x100${result.suffix}`} width={100} height={100}/> </div>)): console.log("didn't work")}</div>
     </div>

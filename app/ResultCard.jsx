@@ -1,7 +1,6 @@
 
 import  Image  from "next/image";
 import Link from "next/link";
-import RCImage from "./ResultCardImage";
 import ImageSlider from "./ImageSlider";
 import styles from './CSS/resultcard.module.css'
 import textStyles from './CSS/textStyles.module.css'

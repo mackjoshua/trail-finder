@@ -35,7 +35,7 @@ export default function Home() {
       
       <div className={styles.midSectionWrapper}>
         <section className={styles.featuresSection}>
-          <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.featuresHeadline}`}>Features Headline</h2>
+          <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold} ${styles.featuresHeadline}`}>What it does for you!</h2>
           <div className={styles.features}>
             <div className={`${textStyles.Biennale} ${textStyles.regular} ${styles.featureBlock}`}>
               <div className={styles.imageWrapper}>

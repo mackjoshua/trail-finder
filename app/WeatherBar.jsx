@@ -9,9 +9,6 @@ import styles2 from './CSS/weatherbar.module.css'
 import Image from 'next/image';
 import orangeShareButton from '../Illustrations/orangeShareButton.png';
 
-// import localFont from '@next/font/dist/local'
-
-// const BiennaleRegular = localFont({ src: 'public/fonts/Biennale/DesktopFonts/TTF/Biennale-Regular.ttf'});
 
 export default function WeatherBar() {
 
@@ -68,20 +65,7 @@ export default function WeatherBar() {
       <div className={styles2.buttonContainer}>
         <BackButton />
       </div>
-      {/* <div className={`${styles.Biennale} ${styles2.containerBar}`}>{dailyWeather?.map((day) => {
-        <p>{day?.feels_like?.day}</p>
-      })}</div> */}
       <div className={`${styles.Biennale} ${styles2.containerBar}`}>{isLoaded ? weatherArray : <p>Not Loaded yet</p>}</div>
-      {/* <div className={`${styles.Biennale} ${styles.semiBold}`}>
-      <h3>Weather this week</h3>
-        <p>77</p>
-        <p>87</p>
-        <p>97</p>
-        <p>77</p>
-        <p>47</p>
-        <p>37</p>
-        <p>27</p>
-      </div> */}
       <div className={styles2.buttonContainer}>
         <ShareButton color="orange">
           <Image alt='An icon of the share image' src={orangeShareButton}/>

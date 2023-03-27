@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useContext } from 'react';
 import { TrailContext } from './Contexts/TrailContext';
 import styles from './CSS/detailsContainer.module.css'

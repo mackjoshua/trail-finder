@@ -10,14 +10,6 @@ import orangeLeftChevron from 'Illustrations/orangeChevronLeft.png'
 import orangeRightChevron from 'Illustrations/orangeChevronRight.png'
 
 
-const options = {
-    method: 'GET',
-    headers: {
-        accept: 'application/json',
-        Authorization: `${process.env.FS_KEY_2}`
-    }
-  };
-
   
 export default function ImageSlider({location, fsq_ID}) {
 

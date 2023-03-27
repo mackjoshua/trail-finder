@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import BackButton from "../BackButton";
 import Result from "../ResultCard"
 import SearchForm from "../SearchForm"

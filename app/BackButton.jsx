@@ -17,7 +17,7 @@ export default function BackButton({buttonInstance}) {
   if (buttonInstance === 'searchPage') {
     return (
       <div className={styles.wrapper}>
-        <button onClick={() => router.back()}>
+        <button onClick={() => router.push('/')}>
           <Image src={backButton} alt="Back Button" className={styles.search}/>
         </button>
       </div>

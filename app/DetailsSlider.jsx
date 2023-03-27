@@ -1,22 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { usePathname, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import styles from './CSS/imageslider.module.css'
-import leftChevron from 'Illustrations/chevron_left.png'
-import rightChevron from 'Illustrations/chevron_right.png'
 import orangeLeftChevron from 'Illustrations/orangeChevronLeft.png'
 import orangeRightChevron from 'Illustrations/orangeChevronRight.png'
-
-
-const options = {
-    method: 'GET',
-    headers: {
-        accept: 'application/json',
-        Authorization: `${process.env.FS_KEY_2}`
-    }
-  };
 
   
 export default function DetailsSlider({location, fsq_ID}) { 
