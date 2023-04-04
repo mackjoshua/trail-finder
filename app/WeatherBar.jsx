@@ -27,7 +27,7 @@ export default function WeatherBar() {
       const fetchTheData = async () => {
 
         // URL wasn't being parsed correctly when using template string so I had to concatenate the string this way
-        const URL = `http://localhost:3000/api/weather?lat=` + latitude + `&lon=` + longitude;
+        const URL = `https://trail-finder-zqqz.vercel.app//api/weather?lat=` + latitude + `&lon=` + longitude;
         const res = await fetch(URL);
         const data = await res.json();
         setWeatherData(data);

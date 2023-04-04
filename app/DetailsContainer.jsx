@@ -34,7 +34,7 @@ export default function DetailsContainer() {
     const fetchData = async () => {
 
       // For some reason, using a template string here wouldn't work. id was being read as ${search} instead of the dynamic value, so I had to concatenate otherwise
-      const URL = `http://localhost:3000/api/placedetails?id=` + search;
+      const URL = `https://trail-finder-zqqz.vercel.app/placedetails?id=` + search; 
       const res = await fetch(URL);
       const data = await res.json();
       setDataBrick(data);

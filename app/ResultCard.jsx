@@ -17,7 +17,7 @@ const options = {
 
 // This function needs to be able to handle ZIP Code input
 async function getData(city,state) {
-    // const res = await fetch('http://localhost:3000/api/places');
+    // const res = await fetch('https://trail-finder-zqqz.vercel.app//api/places');
     const res = await fetch(`https://api.foursquare.com/v3/places/search?categories=16019&near=${city}%2C%20${state}`, options);
     let results = await res.json();
     // console.log(results);
@@ -25,7 +25,7 @@ async function getData(city,state) {
 }
 
 async function getDataZip(ZIPCODE) {
-    // const res = await fetch('http://localhost:3000/api/places');
+    // const res = await fetch('https://trail-finder-zqqz.vercel.app//api/places');
     const res = await fetch(`https://api.foursquare.com/v3/places/search?categories=16019&near=${ZIPCODE}`, options);
     let results = await res.json();
     // console.log(results);
@@ -33,7 +33,7 @@ async function getDataZip(ZIPCODE) {
 }
 
 // async function getPhotos(fsq_ID) {
-//     const URL = `http://localhost:3000/api/photosfetch?id=` + fsq_ID;
+//     const URL = `https://trail-finder-zqqz.vercel.app//api/photosfetch?id=` + fsq_ID;
 //     const res = await fetch(URL);
 //     const data = await res.json();
 //     return data

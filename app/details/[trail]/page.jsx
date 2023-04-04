@@ -12,7 +12,7 @@ import TrailsPageWrapper from '@/app/TrailsPageWrapper';
 
 
 // const getPhotos = async () => {
-//   const URL = 'http://localhost:3000/api/placesphotos';
+//   const URL = 'https://trail-finder-zqqz.vercel.app//api/placesphotos';
 //   const res = await fetch(URL, options);
 //   const slides = await res.json();
 //   return await slides;

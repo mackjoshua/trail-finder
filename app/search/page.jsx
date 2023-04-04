@@ -19,7 +19,7 @@ const options = {
   };
 
 // const getPhotos = async () => {
-//     const URL = 'http://localhost:3000/api/placesphotos';
+//     const URL = 'https://trail-finder-zqqz.vercel.app//api/placesphotos';
 //     // const URL = `https://api.foursquare.com/v3/places/${fsq_id}/photos`
 //     const res = await fetch(URL, options);
 //     const slides = await res.json();
