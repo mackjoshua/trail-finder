@@ -32,11 +32,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-#fonts
-/fonts 
-
-#public
-/public
 
 #illustrations
 
