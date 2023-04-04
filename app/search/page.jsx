@@ -32,10 +32,10 @@ const options = {
 
 export default function Page({searchParams}) {
 
-    console.log(searchParams.near, 'Occuring on the Search Page');
-    console.log(typeof searchParams.near);
-    let term = searchParams.near;
-    let splitTerm = term.split(/[\s,]+/);
+    console.log(searchParams?.near, 'Occuring on the Search Page');
+    console.log(typeof searchParams?.near);
+    let term = searchParams?.near;
+    let splitTerm = term?.split(/[\s,]+/);
 
     return (
       <div className={styles.page}>
