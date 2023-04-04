@@ -14,7 +14,7 @@ const options = {
 export default async function RCImage({fsqID}) { 
     let tester = fsqID;
     // const URL = `https://api.foursquare.com/v3/places/${tester}/photos`;
-    const URL = '127.0.0.1:3000/api/placesphotos';
+    const URL = 'http://localhost:3000/api/placesphotos';
     const res = await fetch(URL, options);
     let results = await res.text();
 

@@ -12,7 +12,7 @@ const options = {
 
 
 const getPhotos = async () => {
-  const URL = '127.0.0.1:3000/api/placesphotos';
+  const URL = 'http://localhost:3000/api/placesphotos';
   const res = await fetch(URL, options);
   const slides = await res.json();
   return await slides;
