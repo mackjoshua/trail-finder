@@ -10,6 +10,6 @@ export default async function handler(req,res) {
 
     let URL = `https://api.openweathermap.org/data/3.0/onecall?${totalCombinedString}&exclude=current,minutely,hourly,alerts&units=imperial&appid=` + process.env.OWA_KEY;
     let response = await fetch(URL);
-    const data = await response.json();
+    const data = await response?.json();
     res.status(200).json(data); 
 }
