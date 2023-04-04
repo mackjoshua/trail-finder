@@ -1,42 +1,42 @@
 @font-face {
     font-family: "Biennale";
     src: local("Biennale"),
-    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-Book.ttf') format('truetype');
+    url('/public/fonts/Biennale/DesktopFonts/TTF/Biennale-Book.ttf') format('truetype');
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Biennale";
     src: local("Biennale"),
-    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-Regular.ttf') format('truetype');
+    url('/public/fonts/Biennale/DesktopFonts/TTF/Biennale-Regular.ttf') format('truetype');
     font-weight: 600;
 }
 
 @font-face {
     font-family: "Biennale";
     src: local("Biennale"),
-    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-Medium.ttf') format('truetype');
+    url('/public/fonts/Biennale/DesktopFonts/TTF/Biennale-Medium.ttf') format('truetype');
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Biennale";
     src: local("Biennale"),
-    url('/fonts/Biennale/DesktopFonts/TTF/Biennale-SemiBold.ttf') format('truetype');
+    url('/public/fonts/Biennale/DesktopFonts/TTF/Biennale-SemiBold.ttf') format('truetype');
     font-weight: 800;
 }
 
 @font-face {
     font-family: "HVAnalogue";
     src: local("HVAnalogue"),
-    url("/fonts/HVAnalogue/Regular/HV-Analogue-Regular.ttf");
+    url("/public/fonts/HVAnalogue/Regular/HV-Analogue-Regular.ttf");
     font-weight: 400;
 }
 
 @font-face {
     font-family: "HVAnalogue";
     src: local("HVAnalogue"),
-    url("/fonts/HVAnalogue/Bold/HV-Analogue-Bold.ttf");
+    url("/public/fonts/HVAnalogue/Bold/HV-Analogue-Bold.ttf");
     font-weight: 800;
 }
 
