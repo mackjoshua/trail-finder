@@ -21,7 +21,7 @@ export default function DetailsSlider({location, fsq_ID}) {
 
     useEffect(() => {
       const fetchData = async () => {
-        const URL = `https://trail-finder-zqqz.vercel.app//api/photosfetch?id=` + fsqID;
+        const URL = `https://trail-finder-zqqz.vercel.app/api/photosfetch?id=` + fsqID;
         const res = await fetch(URL);
         const data = await res.json();
         // console.log(data, 'Here it is Joshua');
