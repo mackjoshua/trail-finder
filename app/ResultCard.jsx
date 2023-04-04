@@ -39,7 +39,7 @@ async function getDataZip(ZIPCODE) {
 //     return data
 // }
 
-export default async function Result ({searchTerm, slides}) {
+export default async function Result ({searchTerm = ['Los Angeles','CA'], slides}) {
 
 
     console.log(searchTerm, 'happening in resultCard component');
@@ -57,14 +57,14 @@ const renderFunction = (results) =>
                 // });
                 
                 return (
-            <div key={result.fsq_id} className={styles.card}>
-                <ImageSlider slides={slides} fsq_ID={result.fsq_id}/>
-                <Link href={`/details/trail?id=${result.fsq_id}`} key={result.fsq_id} className={styles.text}>
-                    <div key={result.fsq_id} className={`${textStyles.Biennale} ${textStyles.regular} ${styles.textContainer}`}>
+            <div key={result?.fsq_id} className={styles.card}>
+                <ImageSlider slides={slides} fsq_ID={result?.fsq_id}/>
+                <Link href={`/details/trail?id=${result?.fsq_id}`} key={result?.fsq_id} className={styles.text}>
+                    <div key={result?.fsq_id} className={`${textStyles.Biennale} ${textStyles.regular} ${styles.textContainer}`}>
                             <h2 className={`${textStyles.HVAnalogue} ${textStyles.bold}`}>{result.name}</h2>
-                            <p>{result.timezone}</p>
-                            <p>{result.location.formatted_address}</p>
-                            <p>{result.location.postcode}</p>
+                            <p>{result?.timezone}</p>
+                            <p>{result?.location.formatted_address}</p>
+                            <p>{result?.location.postcode}</p>
                     </div>
                     <div className={styles.readMore}>
                         <p className={`${textStyles.Biennale} ${textStyles.regular}`}>Read More</p>
@@ -76,7 +76,7 @@ const renderFunction = (results) =>
         </div>
     </section>
 
-    if (searchTerm.length === 1) {
+    if (searchTerm?.length === 1) {
         let { results }  = await getDataZip(searchTerm);
         return (
             <>
